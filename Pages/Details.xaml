@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApiRest.Pages.NewPage1"
+             xmlns:vm="clr-namespace:MauiApiRest.ViewModels"
+             x:DataType="vm:ProductDetailsViewModel"
+             Title="Details">
+
+    <FlexLayout Direction="Column">
+        <Frame Margin="5" Padding="5" FlexLayout.Basis="600">
+            <VerticalStackLayout Padding="10">
+                <Entry Text="{ Binding Produto.Id }"  />
+                <Entry Text="{ Binding Produto.Nome }"  />
+                <Entry Text="{ Binding Produto.Descricao }" />
+                <Entry Text="{ Binding Produto.Preco }"  />
+
+                <Button Text="Update Product" Margin="10" Command="{Binding UpdateProductCommand}" />
+                <Button Text="Delete Product" Margin="10" Command="{Binding DeleteProductCommand}" />
+            </VerticalStackLayout>
+        </Frame>
+    </FlexLayout>
+</ContentPage>
